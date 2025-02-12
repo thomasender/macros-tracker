@@ -178,7 +178,7 @@ function App() {
           ) : (
             <>
               <div className="add-entry-form">
-                <button onClick={addItem}>Add New Item</button>
+                <button onClick={addItem}>Create New Item</button>
                 <input
                   type="text"
                   value={item.name}
@@ -215,7 +215,7 @@ function App() {
                 />
               </div>
               <div className="items">
-                <p>Available Items</p>
+                <p>Add Items to todays record</p>
                 {items.map((item) => (
                   <div>
                     <button key={uuidv4()} onClick={() => onAddToRecord(item)}>
