@@ -27,7 +27,7 @@ function App() {
     calories: 0,
     protein: 0,
   });
-  const [{ record, date }, setRecord] = useState<Record>({
+  const [{ record }, setRecord] = useState<Record>({
     date: "",
     record: [],
   });
@@ -164,8 +164,8 @@ function App() {
 
   return (
     <div className="app-wrapper">
-      <h1>Macro Tracker</h1>
-      <p>Track your macros for {dateString}</p>
+      <h1>Track My Macros</h1>
+      <p>{dateString}</p>
       {currentUser ? (
         <>
           <p>Hi {currentUser.email}</p>
@@ -226,7 +226,6 @@ function App() {
             </>
           )}
           <button onClick={onSaveRecord}>Save Record</button>
-          <p>Todays Macros Record:</p>
           <table className="record">
             <thead>
               <tr>
