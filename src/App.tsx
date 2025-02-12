@@ -167,11 +167,14 @@ function App() {
   return (
     <div className="app-wrapper">
       <h1>Track My Macros</h1>
-      <p>{dateString}</p>
       {currentUser ? (
         <>
-          <p>Hi {currentUser.email}</p>
-          <button onClick={() => auth.signOut()}>Logout</button>
+          <div className="top-wrapper">
+            <p>
+              Hi {currentUser.email}, today is {dateString}
+            </p>
+            <button onClick={() => auth.signOut()}>Logout</button>
+          </div>
           {itemsError && `An error occured fetching the items: ${itemsError}`}
           {loadingItems && !itemsError ? (
             "Loading Items"

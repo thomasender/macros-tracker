@@ -21,6 +21,14 @@
   }
 }
 
+.top-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .add-entry-form {
   display: flex;
   flex-flow: row wrap;
