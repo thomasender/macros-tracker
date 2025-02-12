@@ -40,3 +40,7 @@ tr:last-child td {
   border-top: 2px solid white;
   padding-top: 12px;
 }
+
+.deleteBtn {
+  font-size: 10px;
+}

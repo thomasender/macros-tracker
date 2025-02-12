@@ -219,7 +219,12 @@ function App() {
                     <button key={uuidv4()} onClick={() => onAddToRecord(item)}>
                       {item.name}
                     </button>
-                    <button onClick={() => onDeleteItem(item)}>X</button>
+                    <button
+                      className="deleteBtn"
+                      onClick={() => onDeleteItem(item)}
+                    >
+                      X
+                    </button>
                   </div>
                 ))}
               </div>
