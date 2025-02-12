@@ -156,7 +156,9 @@ function App() {
 
   const onDeleteItem = async (item: Item) => {
     try {
-      await deleteDoc(doc(db, "items", item.id));
+      if (confirm("Do you really want to delete this item?")) {
+        await deleteDoc(doc(db, "items", item.id));
+      }
     } catch (e) {
       alert(`Error deleting item: ${(e as { message: string }).message}`);
     }
